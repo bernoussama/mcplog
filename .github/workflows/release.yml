@@ -35,10 +35,6 @@ jobs:
       - name: Install
         run: pnpm install --frozen-lockfile --prefer-offline
 
-      - name: Build
-        run: pnpm prepack
-      - run: pnpm prepublishOnly
-
       - name: Publish
         run: npm publish --provenance --access public
         env:
