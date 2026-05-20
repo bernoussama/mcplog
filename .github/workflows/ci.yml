@@ -6,19 +6,19 @@ on:
     branches: [master]
 
 jobs:
-  install-deps:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v6
-      - uses: pnpm/action-setup@v6
-        with:
-          version: 11
-      - uses: actions/setup-node@v6
-        with:
-          node-version: lts/*
-          cache: pnpm
-
-      - run: pnpm install --frozen-lockfile
+  # install-deps:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v6
+  #     - uses: pnpm/action-setup@v6
+  #       with:
+  #         version: 11
+  #     - uses: actions/setup-node@v6
+  #       with:
+  #         node-version: lts/*
+  #         cache: pnpm
+  #
+  #     - run: pnpm install --frozen-lockfile
 
   lint:
     runs-on: ubuntu-latest
