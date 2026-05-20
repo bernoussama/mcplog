@@ -4,5 +4,8 @@ export default defineConfig({
   test: {
     environment: "node",
     exclude: ["dist/**", "node_modules/**"],
+    coverage: {
+      provider: 'v8' // or 'istanbul'
+    },
   },
 });

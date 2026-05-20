@@ -78,12 +78,6 @@ bower_components
 # coverage results
 /coverage/
 
-# For now, ignore banchmarks (WIP)
-/benchmarks/
-
-# Vuepress
-.temp
-.cache
 
 # Ignore banchmarks for now
 /benchmarks/*
@@ -91,7 +85,3 @@ bower_components
 # Playwright test results
 /test-results/
 
-# Agent config
-AGENTS.md
-CLAUDE.md
-.claude/
