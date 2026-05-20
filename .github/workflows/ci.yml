@@ -6,11 +6,10 @@ on:
     branches: [master]
 
 jobs:
-  lint-and-fmt:
+  install-deps:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-
       - uses: pnpm/action-setup@v6
         with:
           version: 11
@@ -21,8 +20,32 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
 
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 11
+      - uses: actions/setup-node@v6
+        with:
+          node-version: lts/*
+          cache: pnpm
+
       - name: Lint
         run: pnpm run lint
+
+  fmt:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 11
+      - uses: actions/setup-node@v6
+        with:
+          node-version: lts/*
+          cache: pnpm
 
       - name: Fmt check
         run: pnpm run fmt:check
