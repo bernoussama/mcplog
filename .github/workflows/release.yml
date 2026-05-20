@@ -21,6 +21,8 @@ jobs:
 
       - name: Install pnpm
         uses: pnpm/action-setup@v6
+        with:
+          version: 11
 
       - name: Set node version to 24
         uses: actions/setup-node@v6
@@ -32,10 +34,6 @@ jobs:
 
       - name: Install
         run: pnpm install --frozen-lockfile --prefer-offline
-      - name: Build
-        run: pnpm prepack
-
-      - run: pnpm prepublishOnly
 
       - name: Publish
         run: npm publish --provenance --access public
