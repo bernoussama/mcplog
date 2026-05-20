@@ -2,6 +2,10 @@
   "name": "mcplog",
   "version": "0.0.1",
   "description": "Small JSON-lines logger for MCP servers.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bernoussama/mcplog.git"
+  },
   "license": "MIT",
   "files": [
     "dist"
