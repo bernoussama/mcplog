@@ -1,6 +1,6 @@
 # mcplog
 
-[![lang: Typescript](https://img.shields.io/badge/Language-Typescript-Blue.svg?style=flat-square)](https://www.typescriptlang.org)
+[![lang: TypeScript](https://img.shields.io/badge/Language-TypeScript-Blue.svg?style=flat-square)](https://www.typescriptlang.org)
 ![License: MIT](https://img.shields.io/npm/l/tslog?logo=tslog&style=flat-square)
 ![License: MIT](https://img.shields.io/npm/l/mcplog?style=flat-square)
 ![CI: GitHub](https://github.com/bernoussama/mcplog/actions/workflows/ci.yml/badge.svg)
