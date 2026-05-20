@@ -1,0 +1,19 @@
+.github/workflows/ci.yml
+  s_c61cf3bc272625::t_e45ebc4c7d1ff8 2-5,7-8,11-17
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.10",
+  "base_commit_sha": "386cefff335df3115450143530c6ff765501d3ba",
+  "prompts": {},
+  "sessions": {
+    "s_c61cf3bc272625": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_1b8a8d211ffeEXFNMzvX7OD2u1",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Oussama Bernou <oussama.bernou@outlook.com>"
+    }
+  }
+}
