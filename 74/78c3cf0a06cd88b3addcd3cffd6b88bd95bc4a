@@ -1,0 +1,19 @@
+package.json
+  s_7204aa53b0ed8a::t_f50b24ea15ffa5 37
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.10",
+  "base_commit_sha": "7478c3cf0a06cd88b3addcd3cffd6b88bd95bc4a",
+  "prompts": {},
+  "sessions": {
+    "s_7204aa53b0ed8a": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_1b8870f06ffeblyybjzmwp22Az",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Oussama Bernou <oussama.bernou@outlook.com>"
+    }
+  }
+}
