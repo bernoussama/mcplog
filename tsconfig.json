@@ -2,16 +2,11 @@
   "$schema": "http://json.schemastore.org/tsconfig",
   "compileOnSave": false,
   "compilerOptions": {
-    "lib": [
-      "es2020",
-      "dom"
-    ],
+    "lib": ["es2020", "dom"],
     "target": "es2020",
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
-    "types": [
-      "node"
-    ],
+    "types": ["node"],
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "inlineSourceMap": false,
@@ -20,14 +15,6 @@
     "allowSyntheticDefaultImports": true,
     "removeComments": true
   },
-  "exclude": [
-    "node_modules",
-    "**/node_modules",
-    "**/dist",
-    "**/tests"
-  ],
-  "include": [
-    "src/**/*.ts",
-    "src/global.d.ts"
-  ]
+  "exclude": ["node_modules", "**/node_modules", "**/dist", "**/tests"],
+  "include": ["src/**/*.ts", "src/global.d.ts"]
 }

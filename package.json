@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "Small JSON-lines logger for MCP servers.",
   "license": "MIT",
+  "files": [
+    "dist"
+  ],
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -13,9 +16,6 @@
       "default": "./dist/index.js"
     }
   },
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "build": "pnpm run clean && tsc -p tsconfig.build.json",
     "clean": "node -e \"require('node:fs').rmSync('dist', { recursive: true, force: true })\"",
@@ -24,10 +24,14 @@
     "check-types": "tsc --noEmit",
     "lint": "oxlint",
     "lint:fix": "oxlint --fix",
+    "fmt": "oxfmt",
     "fmt:check": "oxfmt --check",
     "verify": "pnpm run check-types && pnpm run lint && pnpm run test && pnpm run build",
     "prepack": "pnpm run build",
     "prepublishOnly": "pnpm run verify"
+  },
+  "dependencies": {
+    "oxfmt": "^0.51.0"
   },
   "devDependencies": {
     "@types/node": "^22.19.19",

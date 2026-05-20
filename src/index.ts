@@ -18,12 +18,7 @@ export class McpLogger {
   private readonly minRank: number;
   private readonly name: string;
 
-  constructor(options: {
-    name: string;
-    level?: LogLevel;
-    filePath?: string;
-    stderr?: LogSink;
-  }) {
+  constructor(options: { name: string; level?: LogLevel; filePath?: string; stderr?: LogSink }) {
     this.name = options.name;
     this.minRank = LEVEL_RANK[options.level ?? "info"];
 
@@ -33,11 +28,7 @@ export class McpLogger {
       : (options.stderr ?? process.stderr);
   }
 
-  private write(
-    level: LogLevel,
-    message: string,
-    extra?: Record<string, unknown>,
-  ): void {
+  private write(level: LogLevel, message: string, extra?: Record<string, unknown>): void {
     if (LEVEL_RANK[level] < this.minRank) return;
 
     const line =

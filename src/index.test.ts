@@ -24,9 +24,7 @@ function makeStream() {
 describe("McpLogger", () => {
   describe("output target", () => {
     it("defaults to process.stderr when no name/level/path are given", () => {
-      const spy = vi
-        .spyOn(process.stderr, "write")
-        .mockImplementation(() => true);
+      const spy = vi.spyOn(process.stderr, "write").mockImplementation(() => true);
       const logger = new McpLogger({ name: "test" });
       logger.info("hello");
       expect(spy).toHaveBeenCalledOnce();
@@ -35,9 +33,7 @@ describe("McpLogger", () => {
 
     it("writes to a provided stderr stream instead of process.stderr", () => {
       const stream = makeStream();
-      const processSpy = vi
-        .spyOn(process.stderr, "write")
-        .mockImplementation(() => true);
+      const processSpy = vi.spyOn(process.stderr, "write").mockImplementation(() => true);
       new McpLogger({
         name: "test",
         stderr: stream,
@@ -48,9 +44,7 @@ describe("McpLogger", () => {
     });
 
     it("never writes to process.stdout", () => {
-      const spy = vi
-        .spyOn(process.stdout, "write")
-        .mockImplementation(() => true);
+      const spy = vi.spyOn(process.stdout, "write").mockImplementation(() => true);
       const stream = makeStream();
       new McpLogger({
         name: "test",
