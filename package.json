@@ -1,0 +1,36 @@
+{
+  "name": "mcplog",
+  "version": "0.0.1",
+  "description": "Small JSON-lines logger for MCP servers.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "pnpm run clean && tsc -p tsconfig.build.json",
+    "clean": "node -e \"require('node:fs').rmSync('dist', { recursive: true, force: true })\"",
+    "test": "vitest run",
+    "check-types": "tsc --noEmit",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "verify": "pnpm run check-types && pnpm run lint && pnpm run test && pnpm run build",
+    "prepack": "pnpm run build",
+    "prepublishOnly": "pnpm run verify"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.14",
+    "oxlint": "^1.66.0",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.7"
+  }
+}
