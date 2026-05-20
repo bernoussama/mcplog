@@ -24,6 +24,7 @@
     "check-types": "tsc --noEmit",
     "lint": "oxlint",
     "lint:fix": "oxlint --fix",
+    "fmt:check": "oxfmt --check",
     "verify": "pnpm run check-types && pnpm run lint && pnpm run test && pnpm run build",
     "prepack": "pnpm run build",
     "prepublishOnly": "pnpm run verify"
