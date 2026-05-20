@@ -1,10 +1,18 @@
 # mcplog
 
-Small JSON-lines logger for MCP servers.
+[![lang: TypeScript](https://img.shields.io/badge/Language-TypeScript-Blue.svg?style=flat-square)](https://www.typescriptlang.org)
+![License: MIT](https://img.shields.io/npm/l/tslog?logo=tslog&style=flat-square)
+![License: MIT](https://img.shields.io/npm/l/mcplog?style=flat-square)
+![CI: GitHub](https://github.com/bernoussama/mcplog/actions/workflows/ci.yml/badge.svg)
+[![codecov.io](https://codecov.io/github/bernoussama/mcplog/coverage.svg?branch=master)](https://codecov.io/github/bernoussama/mcplog?branch=master)
+
+> Small JSON-lines logger for MCP servers.
 
 ## Install
 
 ```sh
+pnpm add mcplog
+# or
 npm install mcplog
 ```
 
